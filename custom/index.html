@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estimasi Biaya Custom</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Estimasi Biaya Custom</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/profil">profil</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Others
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/service_ringan">service ringan</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/service_berat">service berat</a>
+                </li>
+                <li><a class="dropdown-item" href="/custom">custom</a></li>
+                <li><hr class="dropdown-divider" /></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Estimasi Biaya Custom</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+    <header class="custom-header py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Custom Motor</h1>
+                    <p class="lead mb-4">Paket custom termasuk juga dengan pengecekan mesin dan kelistrikan yang rusak. Transformasi motor sesuai keinginan Anda dengan jaminan kualitas terbaik.</p>
+                    <a href="#calculator" class="btn btn-primary btn-lg px-4">Lihat Biaya Estimasi</a>
+                    <a href="index.html" class="btn btn-outline-light btn-lg px-4 ms-2">Service Ringan</a>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="service-icon">
+                        <i class="bi bi-palette"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="calculator" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Kalkulator Estimasi Biaya Custom</h2>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="calculator-card p-4">
+                        <form id="customServiceForm">
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="motorBrand" class="form-label">Merk Motor</label>
+                                    <select class="form-select" id="motorBrand" required>
+                                        <option value="" selected disabled>-- Pilih Merk Motor --</option>
+                                        <option value="honda">Honda</option>
+                                        <option value="yamaha">Yamaha</option>
+                                        <option value="suzuki">Suzuki</option>
+                                        <option value="kawasaki">Kawasaki</option>
+                                        <option value="vespa">Vespa</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="motorType" class="form-label">Tipe Motor</label>
+                                    <select class="form-select" id="motorType" required>
+                                        <option value="" selected disabled>-- Pilih Tipe Motor --</option>
+                                        <option value="matic">Matic</option>
+                                        <option value="sport">Sport</option>
+                                        <option value="bebek">Bebek</option>
+                                        <option value="custom">Custom</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="mb-4">
+                                <label class="form-label">Paket Custom</label>
+                                <div class="package-options">
+                                    <div class="package-card">
+                                        <input type="radio" name="package" id="basicPackage" value="basic" class="package-input">
+                                        <label for="basicPackage" class="package-label">
+                                            <div class="package-header">
+                                                <h5>Paket Basic</h5>
+                                                <span class="package-price">Rp 1.500.000 - 3.000.000</span>
+                                            </div>
+                                            <p>Custom sederhana dengan pengecekan mesin dan kelistrikan dasar</p>
+                                            <ul>
+                                                <li>Pengecekan mesin dan kelistrikan</li>
+                                                <li>Custom stiker vinyl</li>
+                                                <li>Ganti handlebar atau grips</li>
+                                                <li>Pembersihan dan polishing</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="package-card">
+                                        <input type="radio" name="package" id="premiumPackage" value="premium" class="package-input">
+                                        <label for="premiumPackage" class="package-label">
+                                            <div class="package-header">
+                                                <h5>Paket Premium</h5>
+                                                <span class="package-price">Rp 3.500.000 - 6.000.000</span>
+                                            </div>
+                                            <p>Custom lengkap dengan modifikasi eksterior dan pengecekan menyeluruh</p>
+                                            <ul>
+                                                <li>Pengecekan mesin dan kelistrikan menyeluruh</li>
+                                                <li>Custom paint dengan desain dasar</li>
+                                                <li>Ganti jok motor</li>
+                                                <li>Modifikasi lampu LED</li>
+                                                <li>Ganti knalpot racing</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="package-card">
+                                        <input type="radio" name="package" id="fullCustomPackage" value="full" class="package-input">
+                                        <label for="fullCustomPackage" class="package-label">
+                                            <div class="package-header">
+                                                <h5>Paket Full Custom</h5>
+                                                <span class="package-price">Rp 7.000.000+</span>
+                                            </div>
+                                            <p>Transformasi total motor sesuai konsep yang diinginkan</p>
+                                            <ul>
+                                                <li>Pengecekan dan perbaikan mesin & kelistrikan</li>
+                                                <li>Custom paint dengan desain kompleks/airbrush</li>
+                                                <li>Modifikasi rangka (jika diperlukan)</li>
+                                                <li>Ganti semua aksesoris dengan aftermarket</li>
+                                                <li>Performance upgrade</li>
+                                                <li>Rewiring kelistrikan custom</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="mb-4">
+                                <label class="form-label">Komponen Custom Tambahan</label>
+                                <div class="components-grid">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="component-checkbox">
+                                                <input type="checkbox" id="customPaint" value="customPaint">
+                                                <label for="customPaint">
+                                                    <i class="bi bi-brush"></i>
+                                                    Custom Paint/Desain Khusus
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="component-checkbox">
+                                                <input type="checkbox" id="airbrush" value="airbrush">
+                                                <label for="airbrush">
+                                                    <i class="bi bi-palette2"></i>
+                                                    Airbrush Artwork
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="component-checkbox">
+                                                <input type="checkbox" id="frameMod" value="frameMod">
+                                                <label for="frameMod">
+                                                    <i class="bi bi-wrench"></i>
+                                                    Modifikasi Rangka
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="component-checkbox">
+                                                <input type="checkbox" id="performance" value="performance">
+                                                <label for="performance">
+                                                    <i class="bi bi-speedometer2"></i>
+                                                    Performance Upgrade
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="component-checkbox">
+                                                <input type="checkbox" id="lighting" value="lighting">
+                                                <label for="lighting">
+                                                    <i class="bi bi-headlights"></i>
+                                                    Custom Lighting System
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="component-checkbox">
+                                                <input type="checkbox" id="audio" value="audio">
+                                                <label for="audio">
+                                                    <i class="bi bi-speaker"></i>
+                                                    Audio System
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="mb-4">
+                                <label class="form-label">Layanan Tambahan</label>
+                                <div class="additional-services">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="service-checkbox">
+                                                <input type="checkbox" id="emergency" value="emergency">
+                                                <label for="emergency">Layanan Express (+25%)</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="service-checkbox">
+                                                <input type="checkbox" id="designConsult" value="designConsult">
+                                                <label for="designConsult">Konsultasi Desain (+Rp 500.000)</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="button" class="btn btn-primary btn-lg" id="calculateBtn">Hitung Estimasi Biaya</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="result" class="py-5" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="result-card p-4">
+                        <h3 class="text-center mb-4">Estimasi Biaya Custom Motor</h3>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="detail-item">
+                                    <h5>Rincian Biaya</h5>
+                                    <ul class="list-group" id="costDetails">
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="total-cost text-center">
+                                    <h4>Total Estimasi</h4>
+                                    <div class="price-display" id="totalCost">Rp 0</div>
+                                    <div class="estimated-time mt-3">
+                                        <i class="bi bi-clock me-2"></i>
+                                        <span id="estimatedTime">Estimasi Waktu: -</span>
+                                    </div>
+                                    <p class="text-muted mt-3">*Harga dapat berubah setelah konsultasi detail</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="additional-info mb-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="info-card">
+                                        <h6><i class="bi bi-shield-check me-2"></i>Garansi</h6>
+                                        <p class="mb-0">6 bulan untuk pekerjaan custom dan 30 hari untuk pengecekan mesin & kelistrikan</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-card">
+                                        <h6><i class="bi bi-tools me-2"></i>Proses</h6>
+                                        <p class="mb-0">Konsultasi desain → Pengecekan teknis → Eksekusi → Quality Control</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button class="btn btn-outline-primary me-2" id="backBtn">Kembali ke Kalkulator</button>
+                            <button class="btn btn-primary me-2" id="consultBtn">Konsultasi Desain</button>
+                            <button class="btn btn-success" id="bookBtn">Booking Custom</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Hasil Custom Sebelumnya</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="motor/Steed.jpg" alt="Custom Sport Bike">
+                        </div>
+                        <div class="portfolio-content">
+                            <h5>Sportster Basic Honda Steed 700</h5>
+                            <p>Hasil full custom dari Honda Steed 700 menjadi Sportster</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="motor/Choper modern.jpg" alt="Custom Classic">
+                        </div>
+                        <div class="portfolio-content">
+                            <h5>Suzuki Gs 500 model Chopper semi Modern</h5>
+                            <p>Restorasi dan custom Suzuki Gs 500 dengan sentuhan modern</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="motor/Choper Clasic.jpg" alt="Custom Bobber">
+                        </div>
+                        <div class="portfolio-content">
+                            <h5>Choper Clasicc</h5>
+                            <p>Custom Harley Davidson dengan gaya Chopper</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 MotoCustom Workshop. All rights reserved.</p>
+            <div class="footer-links mt-2">
+                <a href="index.html" class="text-muted me-3">Service Ringan</a>
+                <a href="heavy-service.html" class="text-muted me-3">Service Berat</a>
+                <a href="custom-service.html" class="text-primary">Custom Motor</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

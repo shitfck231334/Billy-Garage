@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Berat</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Dave</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/profil">profil</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Others
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/service_ringan">service ringan</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/service_berat">service berat</a>
+                </li>
+                <li><a class="dropdown-item" href="/custom">custom</a></li>
+                <li><hr class="dropdown-divider" /></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Estimasi Biaya Service Berat</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+    <header class="heavy-header py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Service Berat Motor</h1>
+                    <p class="lead mb-4">Perbaikan mesin komprehensif dan rewiring sistem kelistrikan. Ditangani oleh ahli berpengalaman dengan garansi pekerjaan.</p>
+                    <a href="#calculator" class="btn btn-primary btn-lg px-4 ">Estimasi Biaya Service Berat</a>
+                    <a href="index.html" class="btn btn-outline-light btn-lg px-4 ms-2">Service Ringan</a>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="service-icon">
+                        <i class="bi bi-gear-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="calculator" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Kalkulator Estimasi Service Berat</h2>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="calculator-card p-4 shadow">
+                        <form id="heavyServiceForm">
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="motorBrand" class="form-label fw-bold">Merk Motor</label>
+                                    <select class="form-select" id="motorBrand" required>
+                                        <option value="" selected disabled>-- Pilih Merk Motor --</option>
+                                        <option value="honda">Honda</option>
+                                        <option value="yamaha">Yamaha</option>
+                                        <option value="suzuki">Suzuki</option>
+                                        <option value="kawasaki">Kawasaki</option>
+                                        <option value="vespa">Vespa</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="engineType" class="form-label fw-bold">Tipe Mesin</label>
+                                    <select class="form-select" id="engineType" required>
+                                        <option value="" selected disabled>-- Pilih Tipe Mesin --</option>
+                                        <option value="matic">Matic</option>
+                                        <option value="sport">Sport</option>
+                                        <option value="bebek">Bebek</option>
+                                        <option value="matic">Skutik</option>
+                                        <option value="custom">Custom</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Masalah Mesin</label>
+                                <div class="problems-grid">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-check problem-checkbox">
+                                                <input class="form-check-input" type="checkbox" id="overheat" value="overheat">
+                                                <label class="form-check-label" for="overheat">
+                                                    <i class="bi bi-thermometer-high me-2"></i>Mesin Overheat
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check problem-checkbox">
+                                                <input class="form-check-input" type="checkbox" id="noStart" value="noStart">
+                                                <label class="form-check-label" for="noStart">
+                                                    <i class="bi bi-power me-2"></i>Mesin Susah Hidup
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check problem-checkbox">
+                                                <input class="form-check-input" type="checkbox" id="engineNoise" value="engineNoise">
+                                                <label class="form-check-label" for="engineNoise">
+                                                    <i class="bi bi-volume-up me-2"></i>Suara Mesin Berisik
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check problem-checkbox">
+                                                <input class="form-check-input" type="checkbox" id="lossPower" value="lossPower">
+                                                <label class="form-check-label" for="lossPower">
+                                                    <i class="bi bi-speedometer2 me-2"></i>Kehilangan Tenaga
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check problem-checkbox">
+                                                <input class="form-check-input" type="checkbox" id="oilLeak" value="oilLeak">
+                                                <label class="form-check-label" for="oilLeak">
+                                                    <i class="bi bi-droplet me-2"></i>Bocor Oli
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check problem-checkbox">
+                                                <input class="form-check-input" type="checkbox" id="smoke" value="smoke">
+                                                <label class="form-check-label" for="smoke">
+                                                    <i class="bi bi-cloud me-2"></i>Asap Berlebihan
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Masalah Kelistrikan</label>
+                                <div class="problems-grid">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-check problem-checkbox">
+                                                <input class="form-check-input" type="checkbox" id="battery" value="battery">
+                                                <label class="form-check-label" for="battery">
+                                                    <i class="bi bi-battery-half me-2"></i>Problem Aki
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check problem-checkbox">
+                                                <input class="form-check-input" type="checkbox" id="lighting" value="lighting">
+                                                <label class="form-check-label" for="lighting">
+                                                    <i class="bi bi-lightbulb me-2"></i>Problem Penerangan
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check problem-checkbox">
+                                                <input class="form-check-input" type="checkbox" id="starter" value="starter">
+                                                <label class="form-check-label" for="starter">
+                                                    <i class="bi bi-arrow-repeat me-2"></i>Problem Starter
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check problem-checkbox">
+                                                <input class="form-check-input" type="checkbox" id="charging" value="charging">
+                                                <label class="form-check-label" for="charging">
+                                                    <i class="bi bi-lightning-charge me-2"></i>Problem Sistem Pengisian
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check problem-checkbox">
+                                                <input class="form-check-input" type="checkbox" id="fullRewiring" value="fullRewiring">
+                                                <label class="form-check-label" for="fullRewiring">
+                                                    <i class="bi bi-diagram-3 me-2"></i>Rewiring Total
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check problem-checkbox">
+                                                <input class="form-check-input" type="checkbox" id="ecu" value="ecu">
+                                                <label class="form-check-label" for="ecu">
+                                                    <i class="bi bi-cpu me-2"></i>Problem ECU/CDI
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Layanan Tambahan</label>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="emergency" value="emergency">
+                                            <label class="form-check-label" for="emergency">
+                                                Layanan Emergency (+25%)
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="warranty" value="warranty">
+                                            <label class="form-check-label" for="warranty">
+                                                Garansi Extended 6 Bulan (+15%)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="mb-4">
+                                <div class="alert alert-info">
+                                    <i class="bi bi-info-circle me-2"></i>
+                                    <strong>Biaya Diagnosa:</strong> Rp 75.000 (Termasuk dalam total jika service dilakukan)
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="button" class="btn btn-primary btn-lg" id="calculateBtn">Hitung Estimasi Biaya</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="result" class="py-5 bg-dark" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="result-card p-4 shadow">
+                        <h3 class="text-center mb-4">Estimasi Biaya Service Berat</h3>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="detail-item">
+                                    <h5>Rincian Biaya</h5>
+                                    <ul class="list-group" id="costDetails">
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="total-cost text-center">
+                                    <h4>Total Estimasi</h4>
+                                    <div class="price-display" id="totalCost">Rp 0</div>
+                                    <div class="estimated-time mt-3">
+                                        <i class="bi bi-clock me-2"></i>
+                                        <span id="estimatedTime">Estimasi Waktu: -</span>
+                                    </div>
+                                    <p class="text-muted mt-3">*Harga dapat berubah setelah diagnosa mendetail</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="additional-info mb-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="info-card">
+                                        <h6><i class="bi bi-shield-check me-2"></i>Garansi</h6>
+                                        <p class="mb-0">30 hari untuk perbaikan mesin dan kelistrikan</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-card">
+                                        <h6><i class="bi bi-tools me-2"></i>Sparepart</h6>
+                                        <p class="mb-0">Menggunakan sparepart berkualitas dengan garansi terpisah</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button class="btn btn-outline-primary me-2" id="backBtn">Kembali ke Kalkulator</button>
+                            <button class="btn btn-success me-2" id="consultBtn">Konsultasi Teknisi</button>
+                            <button class="btn btn-warning" id="bookBtn">Booking Service</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Layanan Service Berat Kami</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="service-card p-4 h-100">
+                        <div class="service-icon mb-3">
+                            <i class="bi bi-gear-wide-connected"></i>
+                        </div>
+                        <h4>Overhaul Mesin</h4>
+                        <p>Service komprehensif mesin motor termasuk turun mesin, ganti ring piston, perbaikan kepala silinder, dan tune-up menyeluruh.</p>
+                        <ul class="service-features">
+                            <li>Turun mesin lengkap</li>
+                            <li>Ganti komponen aus</li>
+                            <li>Perbaikan sistem pembakaran</li>
+                            <li>Tune-up dan testing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-card p-4 h-100">
+                        <div class="service-icon mb-3">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h4>Rewiring Kelistrikan</h4>
+                        <p>Perbaikan total sistem kelistrikan motor termasuk wiring harness, ECU/CDI, sistem pengisian, dan instalasi aksesoris.</p>
+                        <ul class="service-features">
+                            <li>Ganti kabel bodi utama</li>
+                            <li>Perbaikan sistem pengisian</li>
+                            <li>Instalasi aksesoris</li>
+                            <li>Diagnosa ECU/CDI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="py-4 bg-dark">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 MotoCustom Workshop. All rights reserved.</p>
+            <div class="footer-links mt-2">
+                <a href="index.html" class="text-muted me-3">Service Ringan</a>
+                <a href="heavy-service.html" class="text-primary me-3">Service Berat</a>
+                <a href="profile.html" class="text-muted">Tentang Kami</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    scrip
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
